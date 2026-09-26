@@ -1,0 +1,169 @@
+:root {
+  --ink: #1c1612;
+  --paper: #f4efe6;
+  --panel: #fffaf3;
+  --line: rgba(28, 22, 18, 0.14);
+  --saffron: #c6531a;
+  --muted: #5e564e;
+  --shadow: 0 24px 60px rgba(28, 22, 18, 0.12);
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Outfit, "Segoe UI", sans-serif;
+  font-weight: 340;
+  line-height: 1.55;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+img { max-width: 100%; display: block; }
+a { color: var(--saffron); }
+h1, h2, h3 {
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 460;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+h1 { font-size: clamp(2.6rem, 6vw, 5.4rem); margin: 0.2em 0 0.35em; }
+h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin: 0 0 0.6em; }
+h3 { font-size: 1.35rem; margin: 0 0 0.4em; }
+p { margin: 0 0 1em; }
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 6vw;
+  background: rgba(244, 239, 230, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.mark {
+  font-family: Fraunces, Georgia, serif;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1.15rem;
+}
+nav { display: flex; flex-wrap: wrap; gap: 1rem 1.25rem; }
+nav a { color: var(--ink); text-decoration: none; font-size: 0.92rem; }
+nav a:hover { color: var(--saffron); }
+
+.hero, .essay, #airport, #rights, #next, footer {
+  padding: 4.5rem 6vw;
+  max-width: 1100px;
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: var(--saffron);
+  margin: 0;
+}
+.lede { font-size: 1.2rem; max-width: 40rem; color: var(--muted); }
+
+.stage-wrap {
+  padding: 0 4vw 3rem;
+}
+.stage {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.6rem;
+}
+.frame {
+  margin: 0;
+  background: var(--panel);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  min-height: 70vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.frame img {
+  width: 100%;
+  height: min(72vh, 860px);
+  object-fit: contain;
+  background:
+    radial-gradient(circle at 50% 40%, #fff 0%, #efe6d6 70%);
+  opacity: 1;
+  transition: opacity 0.45s ease;
+}
+.frame img.is-fading { opacity: 0; }
+figcaption { padding: 1.1rem 1.4rem 1.4rem; }
+.count { color: var(--saffron); font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.3em; }
+figcaption h2 { margin: 0 0 0.35em; font-size: clamp(1.5rem, 2.5vw, 2.1rem); }
+figcaption p:last-child { margin: 0; color: var(--muted); max-width: 46rem; }
+
+.nav-btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ink);
+}
+.nav-btn:hover { border-color: var(--saffron); color: var(--saffron); }
+
+.thumbs {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  padding: 1rem 0.2rem 0.4rem;
+  scroll-snap-type: x proximity;
+}
+.thumbs button {
+  flex: 0 0 auto;
+  width: 92px;
+  height: 72px;
+  padding: 0;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  overflow: hidden;
+  cursor: pointer;
+  background: #efe6d6;
+  scroll-snap-align: start;
+}
+.thumbs button[aria-selected="true"] { border-color: var(--saffron); }
+.thumbs img { width: 100%; height: 100%; object-fit: cover; }
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin: 1.4rem 0;
+}
+.split article {
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 1.3rem 1.4rem 0.4rem;
+  border: 1px solid var(--line);
+}
+.quiet { color: var(--muted); }
+ol { padding-left: 1.2rem; }
+ol li { margin: 0 0 0.8em; }
+footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 800px) {
+  .stage { grid-template-columns: 1fr; }
+  .nav-btn { display: none; }
+  .split { grid-template-columns: 1fr; }
+  .hero, .essay, #airport, #rights, #next, footer { padding: 2.6rem 1.2rem; }
+  .stage-wrap { padding: 0 1rem 2rem; }
+  .frame img { height: 62vh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .frame img { transition: none; }
+}

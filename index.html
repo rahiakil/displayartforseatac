@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>displayartforseatac</title>
+  <meta name="description" content="A viewing set of painted panels from UVE Decoration, offered for a rotating exhibit at Seattle-Tacoma International Airport.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,620&family=Outfit:wght@340;480;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="#view">displayartforseatac</a>
+    <nav>
+      <a href="#view">The panels</a>
+      <a href="#airport">SEA-TAC</a>
+      <a href="#rights">Display rights</a>
+      <a href="#next">How to proceed</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">UVE Decoration · Seattle · September 2026</p>
+      <h1>Display art for SEA-TAC.</h1>
+      <p class="lede">Painted panels from the UVE Decoration group, shown large enough to judge. Flat color, a dark outline, and repeating borders keep the figures readable while people walk past. This page is a viewing set for a rotating exhibit at Seattle-Tacoma International Airport.</p>
+    </section>
+
+    <section id="view" class="stage-wrap" aria-label="Exhibition">
+      <div class="stage">
+        <button class="nav-btn prev" type="button" aria-label="Previous panel">‹</button>
+        <figure class="frame">
+          <img id="stage-img" alt="">
+          <figcaption>
+            <p class="count" id="stage-count"></p>
+            <h2 id="stage-title"></h2>
+            <p id="stage-note"></p>
+          </figcaption>
+        </figure>
+        <button class="nav-btn next" type="button" aria-label="Next panel">›</button>
+      </div>
+      <div class="thumbs" id="thumbs" role="tablist" aria-label="Panels"></div>
+    </section>
+
+    <section class="essay">
+      <h2>What you are looking at</h2>
+      <p>Six views are finished panels, photographed straight on or standing. One shows the larger river panels outdoors, so the scale is visible. Snapshots that do not show the work clearly were left out.</p>
+      <p>Artist names and short biographies are not on this page yet. They will sit under each panel when the makers send them. Until then, every panel is community work from UVE Decoration.</p>
+    </section>
+
+    <section id="airport">
+      <h2>How SEA-TAC shows a temporary exhibit</h2>
+      <p>Seattle-Tacoma International Airport is run by the Port of Seattle. The Port lends wall space for rotating exhibits and also commissions permanent work. A loan of finished panels belongs on the rotating track. The public pages are <a href="https://www.portseattle.org/page/rotating-art-exhibits">Rotating Art Exhibits</a>, <a href="https://www.portseattle.org/apply-public-art">Apply: Public Art Projects</a>, and the <a href="https://www.portseattle.org/sites/default/files/2018-02/art-policy.pdf">Art Program Policy</a>.</p>
+      <div class="split">
+        <article>
+          <h3>A rotating exhibit</h3>
+          <p>Temporary shows are chosen about every 6 to 12 months and are paid as an honorarium for a loan of existing work. The Port asks that the work be suitable for a public room, presented in a professional way, and of lasting interest. The exhibitor usually curates and installs at their own cost, signs an exhibitor agreement and a hold-harmless, and carries the insurance the Port requires. Commercial sales are not part of the show.</p>
+        </article>
+        <article>
+          <h3>What the packet needs</h3>
+          <p>Send a packet to the art program, following the current apply page: a resume, references, a short statement, and four to six labeled images with title, dimensions, date, value, and materials. The published contact on that page is <a href="mailto:publicart@portseattle.org">publicart@portseattle.org</a>. A selection group of Port staff and regional artists reviews it. This website is the viewing set. It is not the application.</p>
+        </article>
+      </div>
+      <p class="quiet">The Port also says a rotating exhibit should connect to Northwest culture, trade, travel, or the airport as a gateway. These panels are a Seattle community’s own work, offered for that public walk. A permanent fixture would be a later commission, not this loan.</p>
+    </section>
+
+    <section id="rights">
+      <h2>What can be given for display</h2>
+      <p>The makers can offer the Port a written license to exhibit the physical panels and to photograph them for labels during the loan. That is a right to display, for a stated time and place. Copyright stays with the makers unless they later sign a separate assignment. Nothing on this page transfers copyright by itself.</p>
+      <p>Before any hanging, the note should name the works, the term, the walls, insurance, who may photograph them, and that the panels return at the end. Biographies and individual credits will be added when they are provided.</p>
+    </section>
+
+    <section id="next">
+      <h2>How to proceed</h2>
+      <ol>
+        <li>Share this page with anyone who needs to judge the panels in one sitting.</li>
+        <li>Write the Port of Seattle art program with this link, a one-page loan offer, and the display license above.</li>
+        <li>Build the packet their apply page asks for: names, dimensions, materials, value, and four to six of these images.</li>
+        <li>Add biographies here when they arrive, so the labels match the people who painted the panels.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>displayartforseatac · UVE Decoration, Seattle. Photographs from September 2026. Display terms on this page are an offer, not a signed license.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
