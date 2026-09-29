@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uttoron 2026 · image archive</title>
+  <meta name="description" content="Compressed 2026 photographs from Uttoron, grouped by event, for a walking review.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,620&family=Outfit:wght@340;480;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="index.html">Uttoron</a>
+    <nav>
+      <a href="index.html">Exhibition</a>
+      <a href="#filters">2026 archive</a>
+    </nav>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">August and September 2026</p>
+      <h1>The year’s pictures, by event.</h1>
+      <p class="lede">Photographs saved from the Uttoron, UVE, and ECKI chats that were on this WhatsApp session, compressed for the page and grouped so you can move through one event at a time. Earlier months of 2026 were not in that session.</p>
+    </section>
+    <div id="filters" class="filters" role="tablist" aria-label="Events"></div>
+    <section class="stage" aria-label="Carousel">
+      <button class="nav prev" type="button" aria-label="Previous">‹</button>
+      <figure>
+        <img id="hero" alt="">
+        <figcaption>
+          <p class="count" id="count"></p>
+          <h2 id="caption"></h2>
+        </figcaption>
+      </figure>
+      <button class="nav next" type="button" aria-label="Next">›</button>
+    </section>
+    <div id="thumbs" class="thumbs"></div>
+  </main>
+  <script src="gallery.js"></script>
+</body>
+</html>
